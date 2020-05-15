@@ -1,0 +1,30 @@
+.page-numbers {
+  margin: 2rem auto;
+}
+
+.page-numbers .number.active {
+  margin-right: 1rem;
+  display: inline-block;
+  font-weight: 400;
+  padding-right: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  color: #babfd1;
+}
+
+.page-numbers .number {
+  margin-right: 1rem;
+  display: inline-block;
+  /* border: 0.5px solid #3c3e47;
+    border-radius: 3px; */
+  font-weight: 400;
+  padding-right: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #15c595;
+}
+
+.page-numbers .number:last-child {
+  margin: 0;
+}

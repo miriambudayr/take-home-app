@@ -1,0 +1,9 @@
+.App {
+  background: #161618;
+  min-height: 100vh;
+  padding-left: 4rem;
+  font-size: calc(10px + 2vmin);
+  color: #babfd1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
