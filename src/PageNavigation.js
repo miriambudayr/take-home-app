@@ -2,29 +2,12 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './PageNavigation.css';
 
-const renderLeftEnd = () => {
+export default function PageNavigation({ pageCount, currentPage }) {
   return (
-    <Fragment>
+    <div className='page-numbers'>
       <Link to={'/1'} className='number'>
         {'<'}
       </Link>
-    </Fragment>
-  );
-};
-
-const renderRightEnd = (pageCount) => {
-  return (
-    <Fragment>
-      <Link to={`/${pageCount}`} className='number'>
-        {'>'}
-      </Link>
-    </Fragment>
-  );
-};
-
-const renderPageNumbers = (pageCount, currentPage) => {
-  return (
-    <Fragment>
       {[...Array(pageCount)].map(function (val, i) {
         const className = i + 1 === currentPage ? 'number active' : 'number';
 
@@ -34,16 +17,9 @@ const renderPageNumbers = (pageCount, currentPage) => {
           </Link>
         );
       })}
-    </Fragment>
-  );
-};
-
-export default function PageNavigation({ pageCount, currentPage }) {
-  return (
-    <div className='page-numbers'>
-      {renderLeftEnd()}
-      {renderPageNumbers(pageCount, currentPage)}
-      {renderRightEnd(pageCount)}
+      <Link to={`/${pageCount}`} className='number'>
+        {'>'}
+      </Link>
     </div>
   );
 }
